@@ -1,91 +1,195 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "AWFixer Industries Technical Docs",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "light": "/favicon.svg",
+    "dark": "/favicon.svg",
+    "url": "https://docs.awfixer.dev"
   },
+  "feedback": {
+    "raiseIssue": true,
+    "suggestEdit": true,
+    "thumbsRating": true
+  },
+  "layout": "sidenav",
   "favicon": "/favicon.svg",
+  "sidebar": {
+    "items": "border"
+  },
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+    "primary": "#346DDB",
+    "light": "#346DDB",
+    "dark": "#346DDB"
+  },
+  "api": {
+    "auth": {
+      "method": "bearer"
     }
+  },
+  "background": {
+    "style": "windows"
+  },
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-HL5WY0BDLG"
+    }
+  },
+  "metadata": {
+    "og:image": "https://raw.githubusercontent.com/awfixer-org/assets/refs/heads/main/Crow's%20Fave's/10.png",
+    "twitter:card": "summary_large_image",
+    "twitter:image": "https://raw.githubusercontent.com/awfixer-org/assets/refs/heads/main/Crow's%20Fave's/10.png",
+    "twitter:site:domain": "awfixer.dev",
+    "apple-mobile-web-app-title": "AWFixer Industries Technical Documentation"
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Forum",
+      "url": "https://forum.awfixer.dev"
+    },
+    {
+      "name": "Reddit",
+      "url": "https://reddit.com/r/awfixer"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Support",
+    "url": "https://discord.gg/awfixer"
+  },
+  "codeBlock": {
+    "mode": "auto"
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Changelog",
+      "url": "changelog"
     },
     {
       "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://awfixer.blog"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/awfixer-org"
+    },
+    {
+      "name": "Github-Dev",
+      "url": "https://github.com/orgs/awfixer-org/repositories?q=visibility%3Apublic+archived%3Afalse+-dev"
+    },
+    {
+      "name": "Gitlab",
+      "url": "https://gitlab.com/awfixer-org"
     }
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Introduction",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "welcome",
+        {
+          "group": "Developing",
+          "icon": "pen-paintbrush",
+          "pages": ["development", "contributing"]
+        },
+        "settings/global",
+        "settings/navigation",
+        "migration"
       ]
     },
     {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
-      ]
+      "group": "Rustfox",
+      "pages": ["rustfox/overview"]
     },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
+      "group": "Changelog",
+      "pages": ["changelog/overview"]
     },
     {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "group": "Blogger",
+      "pages": ["blogger/overview"]
+    },
+    {
+      "group": "AWFixerCDN",
+      "pages": ["cdn/overview"]
+    },
+    {
+      "group": "AWFixerMail",
+      "pages": ["mail/overview"]
+    },
+    {
+      "group": "AWFixerDNS",
+      "pages": ["dns/overview"]
+    },
+    {
+      "group": "AWFixer Apps",
+      "pages": ["apps/overview"]
     }
   ],
-  "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+  "footer": {
+    "socials": {
+      "x": "https://x.com/awfixer",
+      "discord": "https://discord.gg/awfixer",
+      "github": "https://github.com/awfixer-org"
+    },
+    "links": [
+      {
+        "title": "Resources",
+        "links": [
+          {
+            "label": "Enterprise",
+            "url": "https://enterprise.awfixer.dev"
+          },
+          {
+            "label": "Request Preview",
+            "url": "https://discord.gg/awfixer"
+          },
+          {
+            "label": "Templates",
+            "url": "https://github.com/awfixer-org/awfixer-templates"
+          },
+          {
+            "label": "Wall of Love",
+            "url": "https://info.awfixer.dev/recognition"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "Careers",
+            "url": "https://careers.awfixer.dev"
+          },
+          {
+            "label": "Blog",
+            "url": "https://awfixer.blog"
+          },
+          {
+            "label": "Public Roadmap",
+            "url": "https://roadmap.awfixer.dev"
+          },
+          {
+            "label": "Security",
+            "url": "https://forum.awfixer.dev/d/3"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "label": "Privacy Policy",
+            "url": "https://legal.awfixer.dev/privacy"
+          },
+          {
+            "label": "Terms of Service",
+            "url": "https://legal.awfixer.dev/tos"
+          },
+          {
+            "label": "Claims",
+            "url": "https://legal.awfixer.dev/claims"
+          }
+        ]
+      }
+    ]
   }
 }

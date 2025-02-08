@@ -1,97 +1,93 @@
 ---
-title: 'Development'
-description: 'Learn how to preview changes locally'
+title: 'Local Development'
+description: 'Local Development of AWFixer Industries Projects - join the [Discord](https://discord.gg/awfixer) to Discuss'
 ---
 
 <Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
+
+**Prerequisite**: You need a [Github](https://github.com) Account, setup with [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) (we require commits to be signed and verified) as well as a secure method of Multi-Factory Authentication, for information on the packages needed, see the [Github Organization](https://github.com/awfixer-org) Readme
+
 </Info>
 
-Step 1. Install Mintlify on your OS:
+<h1>
+    We Have an extremely specific dev setup, ensuring that as development continues we are always on track for any pipelines or develery schedules
+</h1>
 
-<CodeGroup>
+<p>
+This process involves a lot of automation, as well as 3+ different platforms. The Pipeline and Cycle is layed out below
+</p>
 
-```bash npm
-npm i -g mintlify
-```
-
-```bash yarn
-yarn global add mintlify
-```
-
-</CodeGroup>
-
-Step 2. Go to the docs are located (where you can find `mint.json`) and run the following command:
-
-```bash
-mintlify dev
-```
-
-The documentation website is now available at `http://localhost:3000`.
-
-### Custom Ports
-
-Mintlify uses port 3000 by default. You can use the `--port` flag to customize the port Mintlify runs on. For example, use this command to run in port 3333:
-
-```bash
-mintlify dev --port 3333
-```
-
-You will see an error like this if you try to run Mintlify in a port that's already taken:
-
-```md
-Error: listen EADDRINUSE: address already in use :::3000
-```
-
-## Mintlify Versions
-
-Each CLI is linked to a specific version of Mintlify. Please update the CLI if your local website looks different than production.
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify@latest
-```
-
-```bash yarn
-yarn global upgrade mintlify
-```
-
-</CodeGroup>
-
-## Deployment
-
-<Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
-</Tip>
-
-You should see the following if the deploy successfully went through:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Troubleshooting
-
-Here's how to solve some common problems when working with the CLI.
+<h3>
+    Stop One - Github Dev Repos
+</h3>
 
 <AccordionGroup>
-  <Accordion title="Mintlify is not loading">
-    Update to Node v18. Run `mintlify install` and try again.
-  </Accordion>
-  <Accordion title="No such file or directory on Windows">
-Go to the `C:/Users/Username/.mintlify/` directory and remove the `mint`
-folder. Then Open the Git Bash in this location and run `git clone
-https://github.com/mintlify/mint.git`.
-
-Repeat step 3.
-
-  </Accordion>
-  <Accordion title="Getting an unknown error">
-    Try navigating to the root of your device and delete the ~/.mintlify folder.
-    Then run `mintlify dev` again.
-  </Accordion>
+ <Accordion title="Github Dev Repos Purpose">
+    The dev Repos are the inital gate in our infrastructure, allowing the code to be inspected and tested when it first joins the codebase
+</Accordion>
+<Accordion title="Code Signing">
+    When the code is commited, the first step is to verify that it is signed and authenticated. If the code is not tagged as verifed, it will be rejected
+</Accordion>
+<Accordion title="Pull Requests only please">
+    We do not accept code that is not submitted in the form of a properly formatted Pull Request to our Development Repos, this ensures that all code is inspected the same way
+    and allows the workflows to check for any bugs before we move it along in the proccess of development
+</Accordion>
+<Accordion title="No AI/LLM Generated Code Please">
+    While we do use AI and LLMs to inspect the code, we do not accept any Generated code. Pull requests found to have Generated code in them will be closed and the Contributer will be
+    forbidden from opening further pull requests and issues
+</Accordion>
 </AccordionGroup>
 
-Curious about what changed in a CLI version? [Check out the CLI changelog.](/changelog/command-line)
+
+**Step 1**: Connect to our Github Repos
+
+<CodeGroup>
+
+  ```bash ssh
+  git clone git@github.com:awfixer-org/blogger-dev
+  ```
+
+  ```bash Github Cli - [ DEPRICATED Jan 2025 ]
+  gh repo clone awfixer-org/blogger-dev
+  ```
+
+</CodeGroup>
+
+**Step 2**: Decide on your preffered method of configuring your enviorment, based on the following choices
+
+<Info>
+
+**IMPORTANT** Using one of the following makes it easier to follow documentation, and easier to get support with your work
+
+</Info>
+
+<AccordionGroup>
+  <Accordion title="DevContaienr">
+      <a href="https://devcontainers.github.io/">DevContainers</a> are an industry standard for standardized code enviorments, look for a .devcontainer.yml file
+      in the repo to initialize your dev container
+  </Accordion>
+
+  <Accordion title="Github Codespaces">
+      <a href="https://github.com/features/codespaces">Github Codespaces</a> can be accessed using the `<code>` button at the top right of the repo and follow the devcontainer standard
+  </Accordion>
+
+  <Accordion title="Devpod">
+      <a href="https://devpod.sh">Devpod</a> Devpods allow you to use Dev Containers in the cloud from your local machine in many popular IDEs
+  </Accordion>
+
+  <Accordion title="DevBox">
+      <a href="https://www.jetify.com/devbox">DevBox</a> Dev Box are Command line based isolated enviorments
+  </Accordion>
+
+  <Accordion title="Nix Flake">
+      <a href="https://nix.dev/concepts/flakes">Nix Flakes</a> nix flake support for our repos is a work in progress
+  </Accordion>
+
+  <Accordion title="GitPod">
+      <a href="https://gitpod.io">GitPod</a> Gitpods are virtually self-hosted Devpods, allowing you to remotely store a repos development enviorment
+  </Accordion>
+
+  <Accordion title="Docker/Podman">
+      This is not an officially supported method at this time
+  </Accordion>
+</AccordionGroup>
