@@ -12,7 +12,7 @@
     "thumbsRating": true
   },
   "layout": "sidenav",
-  "favicon": "/favicon.svg",
+  "favicon": "/awfixer.jpg",
   "sidebar": {
     "items": "border"
   },
@@ -27,11 +27,11 @@
     }
   },
   "background": {
-    "style": "windows"
+    "style": "grid"
   },
   "analytics": {
     "ga4": {
-      "measurementId": "G-HL5WY0BDLG"
+      "measurementId": "G-Z53RM2FDYV"
     }
   },
   "metadata": {
@@ -43,8 +43,8 @@
   },
   "topbarLinks": [
     {
-      "name": "Forum",
-      "url": "https://forum.awfixer.dev"
+      "name": "Discord",
+      "url": "https://discord.gg/awfixer"
     },
     {
       "name": "Reddit",
@@ -52,8 +52,8 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Support",
-    "url": "https://discord.gg/awfixer"
+    "name": "Portal",
+    "url": "https://login.awfixer.me"
   },
   "codeBlock": {
     "mode": "auto"
@@ -65,19 +65,15 @@
     },
     {
       "name": "Blog",
-      "url": "https://awfixer.blog"
+      "url": "https://awfixer.me/blog"
     },
     {
       "name": "Github",
-      "url": "https://github.com/awfixer-org"
-    },
-    {
-      "name": "Github-Dev",
-      "url": "https://github.com/orgs/awfixer-org/repositories?q=visibility%3Apublic+archived%3Afalse+-dev"
+      "url": "https://github.com/awfixer"
     },
     {
       "name": "Gitlab",
-      "url": "https://gitlab.com/awfixer-org"
+      "url": "https://gitlab.com/awfixer"
     }
   ],
   "navigation": [
