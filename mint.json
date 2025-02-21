@@ -53,7 +53,7 @@
   ],
   "topbarCtaButton": {
     "name": "Portal",
-    "url": "https://login.awfixer.me"
+    "url": "https://login.awfixer.dev"
   },
   "codeBlock": {
     "mode": "auto"
@@ -65,15 +65,15 @@
     },
     {
       "name": "Blog",
-      "url": "https://awfixer.me/blog"
+      "url": "https://awfixer.dev/blog"
     },
     {
       "name": "Github",
-      "url": "https://github.com/awfixer"
+      "url": "https://github.com/awfixer-industries"
     },
     {
       "name": "Gitlab",
-      "url": "https://gitlab.com/awfixer"
+      "url": "https://gitlab.com/awfixer-org"
     }
   ],
   "navigation": [
